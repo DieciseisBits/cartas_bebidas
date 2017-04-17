@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','ProductoController@panel');
+Route::get('producto/nuevo','ProductoController@nuevo');
+Route::post('producto/crear','ProductoController@crear');

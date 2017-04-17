@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+html{
+  border: 10px solid #BF9679;
+  height: 100%;
+}
+.imagen {
+width:100%;
+}
+
+h2{
+  font-family: 'Tangerine', cursive !important;
+  font-size: 80px !important;
+}
+
+.logo-marca{
+width: 100%;
+float: right;
+max-width: 40px;
+}
+
+.input-sm{
+  border-radius: 0px !important;
+}
+
+.form-control{
+  box-shadow: inset 0 0px 0px rgba(0,0,0,.05) !important;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.05) !important;
+  border: 1px dashed #ccc !important;
+  font-weight: bold;
+}
+
+.enviar{
+padding-top:20px;
+}
+
+.btn-primary{
+  background-color: #722F37 !important;
+  border-color: #722F37 !important;
+  border-radius: 0px !important;
+  color:#FFF !important;
+}
