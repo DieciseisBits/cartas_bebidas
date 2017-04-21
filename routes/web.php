@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/','ProductoController@panel');
-Route::get('producto/nuevo','ProductoController@nuevo');
-Route::post('producto/crear','ProductoController@crear');
+Route::get('/','ProductoController@listarProductos');
+Route::get('carta/nuevo','CartaController@nuevo');
+Route::post('carta/crear','CartaController@crear');
