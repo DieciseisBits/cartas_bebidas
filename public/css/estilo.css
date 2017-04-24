@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
-
+@import url('https://fonts.googleapis.com/css?family=Lato');
 html{
-  border: 10px solid #BF9679;
   height: 100%;
 }
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.ocultar{
+  visibility: hidden;
+}
+
 .imagen {
 width:100%;
 }
@@ -24,10 +32,17 @@ max-width: 40px;
 }
 
 .form-control{
+  font-size: 15px;
+
   box-shadow: inset 0 0px 0px rgba(0,0,0,.05) !important;
   -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.05) !important;
-  border: 1px dashed #ccc !important;
-  font-weight: bold;
+  border-top: 1px solid #FFF !important;
+  border-left: 1px solid #FFF !important;
+  border-right: 1px solid #FFF !important;
+  border-bottom: 2px solid #E6E6E6 !important;
+  padding-left: 4px;
+  padding-top:15px;
+  padding-bottom:15px;
 }
 
 .enviar{
@@ -35,8 +50,115 @@ padding-top:20px;
 }
 
 .btn-primary{
-  background-color: #722F37 !important;
-  border-color: #722F37 !important;
+  background-color: #753E63 !important;
+  border-color: #753E63 !important;
   border-radius: 0px !important;
   color:#FFF !important;
 }
+
+.producto-lista{
+padding-bottom:5px;
+}
+
+.numero_producto{
+  color: #753E63;
+  font-weight: 600;
+}
+
+.icono-nueva-carta{
+  padding-right: 1px;
+}
+
+.botones-nueva-carta{
+  padding-left: 1px;
+}
+
+.botones-nueva-carta table, .icono-nueva-carta > div{
+  width:100%;
+  margin-top:35px;
+}
+
+.icono-nueva-carta > div{
+background-color: #925D81;
+color: #FFF;
+padding: 5px;
+height: 60px;
+}
+
+.botones-nueva-carta td{
+  width:25%;
+
+}
+
+.botones-nueva-carta td div{
+  height: 30px;
+  padding-top: 5px;
+  color: #FFF;
+  text-align: center;
+  border:1px solid #FFF;
+  background-color: #753E63;
+}
+
+.botones-nueva-carta td div:hover{
+  background-color: #925D81;
+}
+
+/**Ribbon*/
+
+.ribbon {
+ font-size: 13px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+ width: 50%;
+ position: relative;
+ background: #934E56;
+ color: #fff;
+ text-align: center;
+ padding: 12px;/* Adjust to suit */
+ margin-bottom:18px;
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #722F37;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+ display: none;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #5B1921 transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+  display: none;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+/**Fin Ribbon*/
+
+<style type="text/css">
+    @media print {
+      body{
+        backgroud-color: red;
+      }
+    }
+<style>

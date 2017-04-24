@@ -12,5 +12,6 @@
 */
 
 Route::get('/','ProductoController@listarProductos');
-Route::get('carta/nuevo','CartaController@nuevo');
+Route::get('carta/nuevo/{n_productos}','CartaController@nuevo');
 Route::post('carta/crear','CartaController@crear');
+Route::get('carta/imprimir','CartaController@imprimir');
