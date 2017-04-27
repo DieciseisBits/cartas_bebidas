@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 html{
   height: 100%;
 }
@@ -103,6 +103,16 @@ height: 60px;
   background-color: #925D81;
 }
 
+#titulo_carta{
+  font-size:40px;
+  font-family: 'Lato', sans-serif;
+  padding:10px;
+  margin-bottom: 25px;
+  border-radius: 0px;
+  font-weight: 100;
+  letter-spacing: 4px;
+}
+
 /**Ribbon*/
 
 .ribbon {
@@ -154,6 +164,17 @@ height: 60px;
 }
 
 /**Fin Ribbon*/
+.tabla-linea{
+  padding:10px;
+}
+
+.tabla-cabecera > div{
+  background-color: #934E56;
+  color: #FFF;
+}
+.tabla-cabecera{
+  padding-left: 10px;
+}
 
 <style type="text/css">
     @media print {

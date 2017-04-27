@@ -4,21 +4,26 @@
       @include('includes.cabecera')
     </head>
     <body>
-      @include('includes.menu')
-      @foreach($productos as $producto)
       <div class="container">
-        <div class="row">
+      @include('includes.menu')
+        <div class="row tabla-cabecera">
+          <div class="col-md-4">ID</div>
+          <div class="col-md-4">Título</div>
+          <div class="col-md-4">Fecha</div>
+        </div>
+      @foreach($cartas as $carta)
+        <div class="row tabla-linea">
           <div class="col-md-4">
-            {{  $producto->id }}
+            {{  $carta->id }}
           </div>
           <div class="col-md-4">
-            {{  $producto->titulo }}
+            {{  $carta->titulo }}
           </div>
           <div class="col-md-4">
-            {{  $producto->subtitulo }}
+            {{  $carta->created_at }}
           </div>
         </div>
-      </div>
       @endforeach
+      </div>
     </body>
 </html>

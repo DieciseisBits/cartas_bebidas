@@ -9,6 +9,9 @@
         <div id="productos" class="row">
           {{ Form::open(array('url'=>'carta/crear','files' => true, 'name' => 'formulario_productos')) }}
           {{ Form::text('n_productos', $n_productos, array('id'=>'n_productos','class'=>'form-control input-sm ocultar')) }}
+            <div class="col-md-12">
+              {{ Form::text('titulo_carta','Título', array('id'=>'titulo_carta','class'=>'form-control input-lg')) }}
+            </div>
           @for ($i = 0;$i< $n_productos; $i++)
           <!--Producto-->
           <div id="producto_{{$i}}" class="col-md-6 producto-lista">
