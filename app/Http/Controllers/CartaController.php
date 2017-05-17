@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Carta;
+use App\Producto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -21,9 +22,9 @@ class CartaController extends Controller
 
     }
 
+
     public function crear()
     {
-
       $proxima_carta = Carta::find(DB::table('cartas')->max('id'));
 
       $n_productos = \Request::input('n_productos');
@@ -43,6 +44,23 @@ class CartaController extends Controller
       $carta->save();
 
       return redirect('/');
+
+    }
+
+    public function editar($id,$n_productos)
+    {
+      //$n_productos se usará para añadir productos nuevos
+      $productos = Producto::where('id_carta',$id)->get();
+
+      return view('carta-editar',array('productos'=> $productos,'n_productos' => $n_productos));
+
+    }
+
+    public function actualizar($id,$n_productos)
+    {
+
+
+
 
     }
 
