@@ -165,7 +165,9 @@ height: 60px;
 
 /**Fin Ribbon*/
 .tabla-linea{
+  margin-left: -5px;
   padding:10px;
+  border-bottom: 1px solid #BDBDBD;
 }
 
 .tabla-cabecera > div{
@@ -174,6 +176,10 @@ height: 60px;
 }
 .tabla-cabecera{
   padding-left: 10px;
+}
+
+a{
+  color:#1C1C1C;
 }
 
 <style type="text/css">

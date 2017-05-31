@@ -14,6 +14,6 @@
 Route::get('/','CartaController@listarCartas');
 Route::get('/listar/productos','ProductoController@listarProductos');
 Route::get('carta/nuevo/{n_productos}','CartaController@nuevo');
-Route::get('carta/editar/{id}/{n_productos}','CartaController@editar');
+Route::get('carta/editar/{id}','CartaController@editar');
 Route::post('carta/crear','CartaController@crear');
 Route::get('carta/imprimir','CartaController@imprimir');

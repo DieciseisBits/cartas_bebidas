@@ -47,11 +47,11 @@ class CartaController extends Controller
 
     }
 
-    public function editar($id,$n_productos)
+    public function editar($id)
     {
       //$n_productos se usará para añadir productos nuevos
       $productos = Producto::where('id_carta',$id)->get();
-
+      $n_productos = Producto::where('id_carta',$id)->count();
       return view('carta-editar',array('productos'=> $productos,'n_productos' => $n_productos));
 
     }
