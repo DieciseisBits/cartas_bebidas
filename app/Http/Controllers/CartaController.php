@@ -72,7 +72,7 @@ class CartaController extends Controller
       return $pdf->stream();
       **/
 
-      $pdf = \PDF::loadView('carta-nuevo',array('n_productos' => 2) );
+      $pdf = \PDF::loadView('carta-imprimir',array('n_productos' => 2) );
       return $pdf->download('invoice.pdf');
     }
 
