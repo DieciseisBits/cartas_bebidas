@@ -24,7 +24,8 @@
                     {{ Form::text('subtitulo_'.$i, 'Subtitulo', array('class'=>'form-control input-sm')) }}
                   </div>
                   <div class="col-xs-4">
-                    <img class="logo-marca" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=340%C3%97340&w=340&h=340">
+                    <img  id="logo_vista_previa_{{$i}}" class="logo-marca" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=340%C3%97340&w=340&h=340">
+                    {{ Form::file('logo_'.$i, array('class'=>'subir-logo', 'onchange'=>'subirLogo(event,'.$i.')','title'=>'Click para cambiar el logo')) }}
                     {{ Form::text('precio_'.$i, 'Precio', array('class'=>'form-control input-sm')) }}
                     {{ Form::text('precio_copa_'.$i, 'P. Copa', array('class'=>'form-control input-sm')) }}
                   </div>
@@ -36,7 +37,9 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <img class="imagen" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97550&w=350&h=550">
+                <!--<img id="imagen_vista_previa_{{$i}}" class="imagen" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97550&w=350&h=550">-->
+                <div id="imagen_vista_previa_{{$i}}" class="imagen"></div>
+                {{ Form::file('imagen_'.$i, array('class'=>'subir-imagen', 'onchange'=>'subirImagen(event,'.$i.')','title'=>'Click para cambiar la imagen')) }}
               </div>
             </div>
           </div>
@@ -48,5 +51,18 @@
         {{ Form::close() }}
         </div>
       </div>
+      <script>
+      var subirLogo = function(event,id) {
+        var salida_logo = document.getElementById('logo_vista_previa_'+id);
+        salida_logo.src = URL.createObjectURL(event.target.files[0]);
+      };
+      var subirImagen = function(event,id) {
+        //var salida_imagen = document.getElementById('imagen_vista_previa_'+id);
+        //salida_imagen.src = URL.createObjectURL(event.target.files[0]);
+        var la_imagen =  URL.createObjectURL(event.target.files[0]);
+        document.getElementById('imagen_vista_previa_'+id).style.background = "url("+la_imagen+") no-repeat";
+        document.getElementById('imagen_vista_previa_'+id).style.backgroundSize = "contain";
+      };
+      </script>
     </body>
 </html>

@@ -13,8 +13,16 @@ body{
 }
 
 .imagen {
-width:100%;
+width: 116px;
+height:182px;
+background: url('https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97550&w=357&h=450') no-repeat;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+-o-background-size: contain;
+background-size: contain;
+
 }
+
 
 h2{
   font-family: 'Tangerine', cursive !important;
@@ -26,6 +34,19 @@ width: 100%;
 float: right;
 max-width: 40px;
 }
+
+.subir-logo{
+position: absolute;
+margin-top:10px;
+opacity: 0;
+}
+
+.subir-imagen{
+position: absolute;
+margin-top:-100px;
+opacity: 0;
+}
+
 
 .input-sm{
   border-radius: 0px !important;
@@ -86,7 +107,7 @@ height: 60px;
 }
 
 .botones-nueva-carta td{
-  width:25%;
+  width:12.5%;
 
 }
 

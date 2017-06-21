@@ -9,16 +9,22 @@
         <div class="col-xs-8 botones-nueva-carta">
           <table>
             <tr>
-              <td><a href="{{ url('/carta/nuevo/1') }}"><div>1</div></a></td>
-              <td><a href="{{ url('/carta/nuevo/2') }}"><div>2</div></a></td>
-              <td><a href="{{ url('/carta/nuevo/3') }}"><div>3</div></a></td>
-              <td><a href="{{ url('/carta/nuevo/4') }}"><div>4</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/6') }}"><div>6</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/8') }}"><div>8</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/10') }}"><div>10</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/12') }}"><div>12</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/14') }}"><div>14</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/16') }}"><div>16</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/18') }}"><div>18</div></a></td>
             </tr>
             <tr>
-              <td><a href="{{ url('/carta/nuevo/5') }}"><div>5</div></a></td>
-              <td><a href="{{ url('/carta/nuevo/6') }}"><div>6</div></a></td>
               <td><a href="{{ url('/carta/nuevo/7') }}"><div>7</div></a></td>
-              <td><a href="{{ url('/carta/nuevo/8') }}"><div>8</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/9') }}"><div>9</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/11') }}"><div>11</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/13') }}"><div>13</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/15') }}"><div>15</div></a></td>
+              <td><a href="{{ url('/carta/nuevo/17') }}"><div>17</div></a></td>
+              <td><div>&nbsp;</div></td>
             </tr>
           </table>
         </div>

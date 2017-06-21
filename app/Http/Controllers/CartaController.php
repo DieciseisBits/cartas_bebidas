@@ -5,6 +5,8 @@ use App\Carta;
 use App\Producto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Carbon\Carbon;
 
 class CartaController extends Controller
 {
@@ -35,6 +37,12 @@ class CartaController extends Controller
         $producto->titulo = \Request::input('titulo_'.$i);
         $producto->subtitulo = \Request::input('subtitulo_'.$i);
         $producto->texto = \Request::input('texto_'.$i);
+
+        $nombre_imagen_logo =  \Request::file('logo_'.$i)->getClientOriginalName();
+        $extension_imagen_logo =  \Request::file('logo_'.$i)->extension();
+        $fecha = date('Y-m-d-s');
+        $mover_logo = \Request::file('logo_'.$i)->storeAs('imagenes', $fecha.'logo.'.$extension_imagen_logo);
+        //falta mover imagen
         $producto->save();
       }
 
@@ -71,8 +79,8 @@ class CartaController extends Controller
       $pdf->loadHTML('<h1>Test</h1>');
       return $pdf->stream();
       **/
-
-      $pdf = \PDF::loadView('carta-imprimir',array('n_productos' => 2) );
+      set_time_limit(120); //60 seconds = 1 minute
+      $pdf = \PDF::loadView('carta-imprimir',array('n_productos' => 8) );
       return $pdf->download('invoice.pdf');
     }
 
