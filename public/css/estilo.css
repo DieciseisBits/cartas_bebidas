@@ -15,14 +15,12 @@ body{
 .imagen {
 width: 116px;
 height:182px;
-background: url('https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97550&w=357&h=450') no-repeat;
+background: url('https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97550&w=116&h=182') no-repeat;
 -webkit-background-size: contain;
 -moz-background-size: contain;
 -o-background-size: contain;
 background-size: contain;
-
 }
-
 
 h2{
   font-family: 'Tangerine', cursive !important;
@@ -46,6 +44,8 @@ position: absolute;
 margin-top:-100px;
 opacity: 0;
 }
+
+
 
 
 .input-sm{

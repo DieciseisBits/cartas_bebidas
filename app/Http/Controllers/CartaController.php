@@ -38,11 +38,18 @@ class CartaController extends Controller
         $producto->subtitulo = \Request::input('subtitulo_'.$i);
         $producto->texto = \Request::input('texto_'.$i);
 
-        $nombre_imagen_logo =  \Request::file('logo_'.$i)->getClientOriginalName();
-        $extension_imagen_logo =  \Request::file('logo_'.$i)->extension();
+        $nombre_archivo_logo =  \Request::file('logo_'.$i)->getClientOriginalName();
+        $extension_archivo_logo =  \Request::file('logo_'.$i)->extension();
         $fecha = date('Y-m-d-s');
-        $mover_logo = \Request::file('logo_'.$i)->storeAs('imagenes', $fecha.'logo.'.$extension_imagen_logo);
-        //falta mover imagen
+        $mover_logo = \Request::file('logo_'.$i)->storeAs('public/imagenes', $fecha.'logo.'.$extension_archivo_logo);
+        $producto->logo = 'public/imagenes/'.$fecha.'logo.'.$extension_archivo_logo;
+
+        $nombre_archivo_imagen =  \Request::file('imagen_'.$i)->getClientOriginalName();
+        $extension_archivo_imagen =  \Request::file('imagen_'.$i)->extension();
+        $fecha = date('Y-m-d-s');
+        $mover_imagen = \Request::file('imagen_'.$i)->storeAs('public/imagenes', $fecha.'imagen.'.$extension_archivo_imagen);
+        $producto->imagen = 'public/imagenes/'.$fecha.'imagen.'.$extension_archivo_imagen;
+
         $producto->save();
       }
 

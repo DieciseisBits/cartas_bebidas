@@ -38,8 +38,8 @@
               </div>
               <div class="col-md-3">
                 <!--<img id="imagen_vista_previa_{{$i}}" class="imagen" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97550&w=350&h=550">-->
-                <div id="imagen_vista_previa_{{$i}}" class="imagen"></div>
-                {{ Form::file('imagen_'.$i, array('class'=>'subir-imagen', 'onchange'=>'subirImagen(event,'.$i.')','title'=>'Click para cambiar la imagen')) }}
+                <div id="imagen_vista_previa_{{$i}}" class="imagen" onClick="cambiaImagen({{$i}})"></div>
+                {{ Form::file('imagen_'.$i, array('id'=>'subir-imagen-'.$i,'class'=>'subir-imagen', 'onchange'=>'subirImagen(event,'.$i.')','title'=>'Click para cambiar la imagen')) }}
               </div>
             </div>
           </div>
@@ -63,6 +63,13 @@
         document.getElementById('imagen_vista_previa_'+id).style.background = "url("+la_imagen+") no-repeat";
         document.getElementById('imagen_vista_previa_'+id).style.backgroundSize = "contain";
       };
+
+        function cambiaImagen(numero){
+          document.getElementById('subir-imagen-'+numero).click();
+
+
+        }
+
       </script>
     </body>
 </html>
