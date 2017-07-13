@@ -7,7 +7,7 @@
       @include('includes.menu')
       <div class="container">
         <div id="productos" class="row">
-          {{ Form::open(array('url'=>'carta/crear','files' => true, 'name' => 'formulario_productos')) }}
+          {{ Form::open(array('url'=>'carta/actualizar/'.$id_carta.'/'.$n_productos,'files' => true, 'name' => 'formulario_productos')) }}
           {{ Form::text('n_productos', $n_productos, array('id'=>'n_productos','class'=>'form-control input-sm ocultar')) }}
             <div class="col-md-12">
               {{ Form::text('titulo_carta','Título', array('id'=>'titulo_carta','class'=>'form-control input-lg')) }}
@@ -25,7 +25,7 @@
                     {{ Form::text('subtitulo_'.$key, $producto->subtitulo, array('class'=>'form-control input-sm')) }}
                   </div>
                   <div class="col-xs-4">
-                    <img class="logo-marca" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=340%C3%97340&w=340&h=340">
+                    <img class="logo-marca" src="http://localhost/cartas_bebidas/storage/app/{{$producto->logo}}">
                     {{ Form::text('precio_'.$key,  Request::old('precio') ? Request::old('precio') : $producto->precio, array('class'=>'form-control input-sm')) }}
                     {{ Form::text('precio_copa_'.$key, Request::old('precio_copa') ? Request::old('precio_copa') : $producto->precio_copa, array('class'=>'form-control input-sm')) }}
                   </div>
@@ -37,7 +37,7 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <img class="imagen" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97550&w=350&h=550">
+                <img class="imagen" src="http://localhost/cartas_bebidas/storage/app/{{$producto->imagen}}">
               </div>
             </div>
           </div>
