@@ -7,7 +7,7 @@
       @include('includes.menu')
       <div class="container">
         <div id="productos" class="row">
-          {{ Form::open(array('url'=>'carta/crear','files' => true, 'name' => 'formulario_productos')) }}
+          {{ Form::open(array('url'=>'carta/guardar-productos-anadidos/'.$id_carta,'files' => true, 'name' => 'formulario_productos')) }}
           {{ Form::text('n_productos', $n_productos, array('id'=>'n_productos','class'=>'form-control input-sm ocultar')) }}
             <div class="col-md-12">
               {{ Form::text('titulo_carta','Título', array('id'=>'titulo_carta','class'=>'form-control input-lg')) }}

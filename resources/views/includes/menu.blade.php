@@ -35,6 +35,7 @@
 
     </div>
     <div class="col-md-4">
+      <a href="{{ url('/') }}">Inicio</a>
       @if (Route::has('login'))
           <div class="top-right links">
               @if (Auth::check())
